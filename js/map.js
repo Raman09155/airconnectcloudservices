@@ -1,54 +1,17 @@
-/* ==============================================
-    MAP -->
-    =============================================== */
+document.addEventListener("DOMContentLoaded", function () {
+  const mapContainer = document.getElementById("custom-places");
 
-var locations = [
-  [
-    '<div class="infobox"><h3 class="title"><a href="#">OUR USA OFFICE</a></h3><span>NEW YORK CITY 2045 / 65</span><span>+90 555 666 77 88</span></div>',
-    52.370216,
-    4.895168,
-    2,
-  ],
-];
-var map = new google.maps.Map(document.getElementById("map"), {
-  zoom: 14,
-  scrollwheel: false,
-  navigationControl: true,
-  mapTypeControl: false,
-  scaleControl: false,
-  draggable: true,
-  styles: [
-    {
-      featureType: "administrative",
-      elementType: "labels.text.fill",
-      stylers: [
-        {
-          featureType: "poi.business",
-          elementType: "geometry.fill",
-          stylers: [{ visibility: "on" }],
-        },
-      ],
-    },
-  ],
-  center: new google.maps.LatLng(52.370216, 4.895168),
-  mapTypeId: google.maps.MapTypeId.ROADMAP,
+  if (mapContainer) {
+      mapContainer.innerHTML = `
+          <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.195210259066!2d77.21747777416553!3d28.563900287196457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce268198fc4f3%3A0xab8ae3cd6579449e!2sAIRCONNECT%20INFOSYSTEMS%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1744098518113!5m2!1sen!2sin" 
+              width="100%" 
+              height="350" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+      `;
+  }
 });
-var infowindow = new google.maps.InfoWindow();
-var marker, i;
-for (i = 0; i < locations.length; i++) {
-  marker = new google.maps.Marker({
-    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-    map: map,
-    icon: "images/loaders/loader-realestate.gif",
-  });
-  google.maps.event.addListener(
-    marker,
-    "click",
-    (function (marker, i) {
-      return function () {
-        infowindow.setContent(locations[i][0]);
-        infowindow.open(map, marker);
-      };
-    })(marker, i)
-  );
-}

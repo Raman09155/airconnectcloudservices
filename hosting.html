@@ -445,7 +445,7 @@
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="icon-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
                         <i class="flaticon-cer-file-format global-radius effect-1 alignleft"></i>
-                        <h3>Free SSL Certifica</h3>
+                        <h3>Free SSL Certificate</h3>
                         <p>
                             Get a free SSL certificate to secure your website and protect user data. It encrypts sensitive information, ensuring safe transactions
                             <small class="readmore">
@@ -486,7 +486,7 @@
             <div class="modal fade" id="popupModal5" tabindex="-1">
                 <div class="modal-dialog"><div class="modal-content">
                     <div class="modal-header">
-                        <h3><i class="flaticon-cer-file-format global-radius effect-1 alignleft"></i> Free SSL Certifica</h3>
+                        <h3><i class="flaticon-cer-file-format global-radius effect-1 alignleft"></i> Free SSL Certificate</h3>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
@@ -612,49 +612,52 @@
                 <div class="col-md-12">
                     <div class="contact_form">
                         <div id="message"></div>
-                        <form id="contactform" class="row" action="contact.php" name="contactform" method="post">
+                        <form id="contactform" class="row" action="./contact.php" method="post">
                             <fieldset class="row-fluid">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-lg-6">
                                     <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name">
+                                    <small class="error-message text-danger"></small>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-lg-6">
                                     <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name">
+                                    <small class="error-message text-danger"></small>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-lg-6">
                                     <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
+                                    <small class="error-message text-danger"></small>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-lg-6">
                                     <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone">
+                                    <small class="error-message text-danger"></small>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <label class="sr-only">Select Service</label>
-                                    <select name="select_service" id="select_service" class="selectpicker form-control" data-style="btn-white">
+                                <div class="col-lg-6">
+                                    <select name="select_service" id="select_service" class="form-control">
                                         <option value="12">Select Package</option>
-                                        <option value="Web Design">Web Hosting</option>
-                                        <option value="Web Development">Shared Hosting</option>
-                                        <option value="Graphic Design">Reseller Hosting</option>
+                                        <option value="Web Hosting">Web Hosting</option>
+                                        <option value="Shared Hosting">Shared Hosting</option>
+                                        <option value="Reseller Hosting">Reseller Hosting</option>
                                         <option value="Others">Others</option>
                                     </select>
+                                    <small class="error-message text-danger"></small>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <label class="sr-only">Select Country</label>
-                                    <select name="select_price" id="select_price" class="selectpicker form-control" data-style="btn-white">
+                                <div class="col-lg-6">
+                                    <select name="select_price" id="select_price" class="form-control">
+                                        <option value="">Select Country</option>
                                         <option value="India">India</option>
-                                        <option value="Italy">Italy</option>
-                                        <option value="Holland">Holland</option>
-                                        <option value="Germany">Germany</option>
                                     </select>
+                                    <small class="error-message text-danger"></small>
                                 </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-lg-12">
                                     <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Give us more details.."></textarea>
+                                    <small class="error-message text-danger"></small>
                                 </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                                    <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Get a Quote</button>
+                                <div class="col-lg-12 text-center">
+                                    <button type="submit" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Get a Quote</button>
                                 </div>
                             </fieldset>
                         </form>
                     </div>
-                </div><!-- end col -->
+                </div>
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
@@ -775,6 +778,9 @@
     <script src="js/all.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
+
+    <!-- contact js -->
+    <script src="./js/contact.js"></script>
 
 </body>
 </html>
